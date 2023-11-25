@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row p-5 border-bottom border-danger bg-dark">
+            <h1 class="text-center text-danger" style="font-family: 'Bebas Neue', sans-serif; font-size: 50px;">
+                Preenchendo
+                Formulário</h1>
+        </div>
+        <div class="row border border-danger p-5 m-5 bg-white">
+            <div class="col-md-6 border" id="form" style="font-family: 'Oswald', sans-serif; font-size: 20px;">
+                <form id="formulario">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label ">Nome: </label>
+                        <input type="text" class="form-control w-50" id="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sobrenome" class="form-label ">Sobrenome: </label>
+                        <input type="text" class="form-control w-50" id="sobrenome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nascimento" class="form-label ">Ano de nascimento: </label>
+                        <input type="number" class="form-control w-50" id="nascimento" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="salario" class="form-label"> Salário:</label>
+                        <input type="number" class="form-control w-50" id="salario" required>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="form-check m-3">
+                            <input class="form-check-input" type="radio" name="genero" id="masculino"
+                                onchange="mudaCor()">
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check m-3">
+                            <input class="form-check-input" type="radio" name="genero" id="feminino"
+                                onchange="mudaCor()">
+                            <label class="form-check-label" for="feminino">Feminino</label>
+                        </div>
+                        <div class="form-check m-3">
+                            <input class="form-check-input" type="radio" name="genero" id="outro" onchange="mudaCor()">
+                            <label class="form-check-label" for="outro">Outro</label>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="form-check m-1">
+                            <input class="form-check-input" type="checkbox" value="h" id="html"
+                                onchange="mostrar('img-html')">
+                            <label class="form-check-label" for="html">
+                                HTML
+                            </label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input class="form-check-input" type="checkbox" value="c" id="css"
+                                onchange="mostrar('img-css')">
+                            <label class="form-check-label" for="css">
+                                CSS
+                            </label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input class="form-check-input" type="checkbox" value="j" id="js"
+                                onchange="mostrar( 'img-js')">
+                            <label class="form-check-label" for="js">
+                                Java Script
+                            </label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input class="form-check-input" type="checkbox" value="p" id="python"
+                                onchange="mostrar('img-p')">
+                            <label class="form-check-label" for="python">
+                                Python
+                            </label>
+                        </div>
+                        <div class="form-check m-1">
+                            <input class="form-check-input" type="checkbox" value="java" id="java"
+                                onchange="mostrar('img-j')" s>
+                            <label class="form-check-label" for="java">
+                                Java
+                            </label>
+                        </div>
+                    </div>
+                    <div class=" m-4 d-flex justify-content-center">
+
+                        <input type="submit" value="Cadastrar" class="btn btn-primary">
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-6 border p-5 text-center text-danger" style="font-family: 'Bebas Neue', sans-serif;">
+                <p id="resposta" style="font-size: 32px;"> Digite o nome </p>
+
+                <div class="d-flex justify-content-center p-2">
+                    <img src="img/sinal-de-interrogacao.png" id="img" alt="imagem interrogação"
+                        title="imagem interrogação">
+                </div>
+                <p style="font-size:32px;"> Se o salário for maior que R$1500 o formulário fica verde senão fica
+                    vermelho !</p>
+                <div>
+                    <p style="font-size:32px;">Selecione a checkbox</p>
+                    <img src="img/html-5.png" class="m-2 d-none" id="img-html">
+                    <img src="img/css-3.png" class="m-2 d-none" id="img-css">
+                    <img src="img/script-java.png" class="m-2 d-none" id="img-js">
+                    <img src="img/python.png" class="m-2 d-none" id="img-p">
+                    <img src="img/java.png" class="m-2 d-none" id="img-j">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
